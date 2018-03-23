@@ -1,4 +1,4 @@
-package com.springboot.common.annoation;
+package com.springboot.producter.common.annoation;
 
 import java.lang.annotation.*;
 

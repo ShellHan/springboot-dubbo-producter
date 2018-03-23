@@ -3,7 +3,7 @@
   <groupId>com.han</groupId>
   <artifactId>spring-boot-dubbo-producter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   
   <!-- spring boot parent节点，引入这个之后，在下面和spring boot相关的就不需要引入版本了; -->
 	<parent>
@@ -15,7 +15,6 @@
  <!-- 指定一下jdk的版本 ，这里我们使用jdk 1.8 ,默认是1.6 -->
    <properties>
    	 <java.version>1.8</java.version>
-   	 <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
    </properties>
   
   <dependencies>
@@ -34,31 +33,6 @@
 	<dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>jstl</artifactId>
-	</dependency>
-  	<dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-jdbc</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-data-jpa</artifactId>
-	</dependency>
-  	
-  	<!-- tomcat 的支持. -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-tomcat</artifactId>
-		<scope>provided</scope>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.apache.tomcat.embed</groupId>
-		<artifactId>tomcat-embed-jasper</artifactId>
-		<scope>provided</scope>
 	</dependency>
   	
   	 <!-- redis依赖包 -->  
@@ -92,19 +66,30 @@
         <artifactId>lombok</artifactId>  
     </dependency>  
     
-    <!-- Spring Boot Dubbo 依赖 -->
     <dependency>
-        <groupId>io.dubbo.springboot</groupId>
-        <artifactId>spring-boot-starter-dubbo</artifactId>
-        <version>${dubbo-spring-boot}</version>
-    </dependency>
-
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>dubbo</artifactId>
+	    <version>2.5.6</version>
+	</dependency>
+	
 	<dependency>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-test</artifactId>
 	    <version>1.5.3.RELEASE</version>
 	    <scope>test</scope>
 	</dependency>
+	
+	<dependency>
+	  <groupId>com.101tec</groupId>
+	  <artifactId>zkclient</artifactId>
+	  <version>0.9</version>
+	</dependency>
+	
+	 <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 

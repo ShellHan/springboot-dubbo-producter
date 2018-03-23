@@ -1,4 +1,4 @@
-package com.springboot.common.constants;
+package com.springboot.producter.common.constants;
 
 import lombok.Data;
 import lombok.ToString;
